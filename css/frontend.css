@@ -1,0 +1,65 @@
+.haet-cleverreach .message-error{
+    color:red;
+}
+
+.haet-cleverreach .haet-cleverreach-field-wrap {
+    margin-bottom: 10px;
+}
+
+.haet-cleverreach .haet-cleverreach-field-wrap p{
+    margin: 0;
+}
+
+/* CLEARFIX */
+.haet-cleverreach .haet-cleverreach-field-wrap { zoom: 1; }
+.haet-cleverreach .haet-cleverreach-field-wrap:before, 
+.haet-cleverreach .haet-cleverreach-field-wrap:after { content: ""; display: table; }
+.haet-cleverreach .haet-cleverreach-field-wrap:after { clear: both; }
+
+.haet-cleverreach .label-left label{
+    display: block;
+    float: left;
+    width: 40%;
+    margin:0;
+    text-align: left;
+}
+
+.haet-cleverreach .label-left input,
+.haet-cleverreach .label-left select{
+    display: block;
+    float: left;
+    width: 60%;
+    margin:0;
+    text-align: left;
+}
+
+.haet-cleverreach .label-right label{
+    display: block;
+    float: right;
+    width: 35%;
+    margin:0;
+    margin-left:5%;
+    text-align: left;
+}
+
+.haet-cleverreach .label-right input,
+.haet-cleverreach .label-right select{
+    display: block;
+    float: right;
+    width: 60%;
+    margin:0;
+    text-align: left;
+}
+
+.haet-cleverreach-field-wrap.type-submit {
+    text-align: center;
+}
+
+
+/* form integrations */
+.cleverreach-checkbox input{
+    display: inline;
+}
+.cleverreach-checkbox label[for="cleverreach_checkbox_comments"]{
+    display: inline;
+}

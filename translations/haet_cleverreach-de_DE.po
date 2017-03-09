@@ -1,0 +1,535 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CleverReach Newsletter Integration v1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-07-06 15:20:50+0000\n"
+"Last-Translator: hannes <hannes@haet.at>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: includes/class-admin.php:24
+#@ haet_cleverreach
+msgid "General settings"
+msgstr "Allgemeine Einstellungen"
+
+#: includes/class-admin.php:30
+#@ haet_cleverreach
+msgid "CleverReach API key"
+msgstr "CleverReach API Key"
+
+#: includes/class-admin.php:40
+#@ haet_cleverreach
+msgid "Comment Form Integration"
+msgstr "Kommentar Integration"
+
+#: includes/class-admin.php:46
+#@ haet_cleverreach
+msgid "Show checkbox in comments"
+msgstr "Anmelde-Checkbox im Kommentar Formular anzeigen"
+
+#: includes/class-admin.php:53
+#@ haet_cleverreach
+msgid "Checkbox caption"
+msgstr "Checkbox Beschriftung"
+
+#: includes/class-admin.php:60
+#: views/admin/settings-form.php:109
+#@ haet_cleverreach
+msgid "CleverReach form"
+msgstr "CleverReach Formular"
+
+#: includes/class-admin.php:67
+#@ haet_cleverreach
+msgid "Checked by default"
+msgstr "Vorausgewählt"
+
+#: includes/class-admin.php:112
+#@ haet_cleverreach
+msgid "Form Settings"
+msgstr "Formular Einstellungen"
+
+#: includes/class-admin.php:118
+#@ haet_cleverreach
+msgid "Success message"
+msgstr "Erfolgsnachricht"
+
+#: includes/class-admin.php:125
+#@ haet_cleverreach
+msgid "Invalid Email"
+msgstr "Ungültige E-Mail Adresse"
+
+#: includes/class-admin.php:132
+#@ haet_cleverreach
+msgid "Already subscribed"
+msgstr "Bereits angemeldet"
+
+#: includes/class-admin.php:139
+#@ haet_cleverreach
+msgid "An Error occured"
+msgstr "Es ist ein Fehler aufgetreten"
+
+#: includes/class-admin.php:146
+#@ haet_cleverreach
+msgid "Required Field Error"
+msgstr "Pflichtfeld Fehlermeldung"
+
+#: includes/class-admin.php:153
+#@ haet_cleverreach
+msgid "Label position"
+msgstr "Position der Beschriftung"
+
+#: includes/class-admin.php:217
+#@ haet_cleverreach
+msgid "CleverReach Form Integrations"
+msgstr "CleverReach Formular Integration"
+
+#: includes/class-admin.php:218
+#@ haet_cleverreach
+msgid "Integrations"
+msgstr "Integration"
+
+#: includes/class-admin.php:226
+#: includes/class-admin.php:227
+#: views/admin/settings-form.php:2
+#@ haet_cleverreach
+msgid "Form Builder"
+msgstr "Form Builder"
+
+#: includes/class-admin.php:246
+#: views/admin/settings-form.php:43
+#: views/admin/settings-form.php:60
+#: views/admin/settings-form.php:83
+#@ haet_cleverreach
+msgid "Label"
+msgstr "Beschriftung"
+
+#: includes/class-admin.php:247
+#: views/admin/settings-form.php:33
+#@ haet_cleverreach
+msgid "Text"
+msgstr "Text"
+
+#: includes/class-admin.php:248
+#: views/admin/settings-form.php:65
+#@ haet_cleverreach
+msgid "Available Options"
+msgstr "Verfügbare Optionen"
+
+#: includes/class-admin.php:264
+#@ haet_cleverreach
+msgid "Please enter your API key to connect to your CleverReach account.<br><br>If you don't have an account yet <a href=\"http://www.cleverreach.com/?rk=74089ojcjrsrb\" target=\"_blank\">SIGNUP HERE</a> for a free newsletter system for up to 250 receivers."
+msgstr "Bitte gib deinen CleverReach API Key ein um eine Verbindung zu deinem CleverReach Account herzustellen.<br><br>Wenn du noch keinen CleverReach Account hast, kannst du dich <a href=\"http://www.cleverreach.com/?rk=74089ojcjrsrb\" target=\"_blank\">HIER</a>  anmelden.<br>Du erhältst für bis zu 250 Empfänger ein konstenloses professionelles Newsletter-System."
+
+#: includes/class-admin.php:340
+#@ haet_cleverreach
+msgid "List:"
+msgstr "Liste:"
+
+#: includes/class-admin.php:355
+#@ haet_cleverreach
+msgid "You can find the API key in your <a href=\"https://eu1.cleverreach.com/admin/account_api.php?rk=74089ojcjrsrb\" target=\"_blank\">CleverReach account settings</a>"
+msgstr "Den API key findest du in deinen <a href=\"https://eu1.cleverreach.com/admin/account_api.php?rk=74089ojcjrsrb\" target=\"_blank\">CleverReach Account Einstellungen</a>."
+
+#: includes/class-admin.php:364
+#: includes/class-admin.php:387
+#: includes/class-admin.php:401
+#: includes/class-admin.php:425
+#@ default
+msgid "Yes"
+msgstr ""
+
+#: includes/class-admin.php:365
+#: includes/class-admin.php:388
+#: includes/class-admin.php:402
+#: includes/class-admin.php:426
+#@ default
+msgid "No"
+msgstr ""
+
+#: includes/class-admin.php:486
+#@ haet_cleverreach
+msgid "Left of field"
+msgstr "Links vom Feld"
+
+#: includes/class-admin.php:487
+#@ haet_cleverreach
+msgid "Above field"
+msgstr "Über dem Feld"
+
+#: includes/class-admin.php:488
+#@ haet_cleverreach
+msgid "Right of field"
+msgstr "Rechts des Feldes"
+
+#: includes/class-admin.php:489
+#@ haet_cleverreach
+msgid "Inside field"
+msgstr "Innerhalb des Feldes"
+
+#: includes/class-api.php:24
+#: includes/class-api.php:39
+#@ haet_cleverreach
+msgid "Your API key is invalid."
+msgstr "Dein API Key ist ungültig."
+
+#: includes/class-api.php:30
+#@ haet_cleverreach
+msgid "Your API has read-only permissions, please change to read-write-access."
+msgstr "Dein API Key hat nur lesenden Zugriff. Bitte gib einen API Key mit Schreibrechten ein."
+
+#: includes/class-api.php:33
+#@ haet_cleverreach
+msgid "Successfully connected to Cleverreach with your API key."
+msgstr "Verbindung zu deinem CleverReach Account erfolgreich hergestellt."
+
+#: includes/class-api.php:61
+#@ haet_cleverreach
+msgid "You don't have any Cleverreach forms."
+msgstr "Du hast noch keine Formulare in deinem CleverReach Account angelegt."
+
+#: includes/class-api.php:77
+#: includes/class-api.php:103
+#: includes/class-api.php:127
+#: includes/class-api.php:194
+#@ haet_cleverreach
+msgid "Could not connect to the Cleverreach API."
+msgstr "Konnte nicht mit CleverReach verbinden."
+
+#: includes/class-widget.php:7
+#@ haet_cleverreach
+msgid "CleverReach Sign-Up Form"
+msgstr "CleverReach Anmeldeformular"
+
+#: includes/class-widget.php:30
+#@ default
+msgid "Title:"
+msgstr ""
+
+#: includes/functions.php:31
+#: includes/functions.php:34
+#@ haet_cleverreach
+msgid "Sign up for our newsletter"
+msgstr "Ich möchte mich zum Newsletter anmelden"
+
+#: includes/functions.php:37
+#@ haet_cleverreach
+msgid "Oops. Something went wrong. Please try again later."
+msgstr "Es ist ein Fehler aufgetreten, bitte versuch es später nochmal."
+
+#: includes/functions.php:38
+#@ haet_cleverreach
+msgid "Thank you for your subscription."
+msgstr "Vielen Dank für Deine Anmeldung"
+
+#: includes/functions.php:39
+#@ haet_cleverreach
+msgid "You're already subscribed."
+msgstr "Du bist bereits angemeldet."
+
+#: includes/functions.php:40
+#@ haet_cleverreach
+msgid "Please provide a valid email address."
+msgstr "Bitte gib eine gültige E-Mail Adresse an."
+
+#: includes/functions.php:41
+#@ haet_cleverreach
+msgid "This is a mandatory field."
+msgstr "Dies ist ein Pflichtfeld."
+
+#: views/admin/settings-form.php:14
+#@ haet_cleverreach
+msgid "Drag & Drop fields to create your form"
+msgstr "Zieh deine Felder an die gewünschte Position um dein Formular zusammen zu stellen."
+
+#: views/admin/settings-form.php:17
+#@ haet_cleverreach
+msgid "Your Form"
+msgstr "Dein Formular"
+
+#: views/admin/settings-form.php:23
+#@ haet_cleverreach
+msgid "Available Fields"
+msgstr "Verfügbare Felder"
+
+#: views/admin/settings-form.php:30
+#@ haet_cleverreach
+msgid "Description Text"
+msgstr "Beschreibungstext"
+
+#: views/admin/settings-form.php:34
+#@ haet_cleverreach
+msgid "Signup for our Newsletter!"
+msgstr "Melde dich zu unserem Newsletter an!"
+
+#: views/admin/settings-form.php:40
+#@ haet_cleverreach
+msgid "Email Address"
+msgstr "E-Mail Adresse"
+
+#: views/admin/settings-form.php:44
+#@ haet_cleverreach
+msgid "Email"
+msgstr "E-Mail"
+
+#: views/admin/settings-form.php:67
+#@ haet_cleverreach
+msgid "Mrs."
+msgstr "Frau"
+
+#: views/admin/settings-form.php:68
+#@ haet_cleverreach
+msgid "Mr."
+msgstr "Herr"
+
+#: views/admin/settings-form.php:69
+#@ haet_cleverreach
+msgid "Family"
+msgstr "Familie"
+
+#: views/admin/settings-form.php:70
+#@ haet_cleverreach
+msgid "Company"
+msgstr "Firma"
+
+#: views/admin/settings-form.php:80
+#@ haet_cleverreach
+msgid "Submit Button"
+msgstr "Absenden-Button"
+
+#: views/admin/settings-form.php:84
+#@ haet_cleverreach
+msgid "Subscribe"
+msgstr "Anmelden"
+
+#: views/admin/settings-form.php:97
+#@ haet_cleverreach
+msgid "Delete this form and reload attributes from CleverReach?"
+msgstr "Dieses Formular löschen und die Formularfelder von CleverReach laden"
+
+#: views/admin/settings-form.php:103
+#@ haet_cleverreach
+msgid "Please select a form below to load the attributes from CleverReach."
+msgstr "Bitte wähle ein Formular um die Felder von deinem CleverReach Account zu laden."
+
+#: views/admin/settings-form.php:121
+#@ haet_cleverreach
+msgid "Load Form Attributes"
+msgstr "Lade Formular Felder"
+
+#: views/admin/settings-general.php:3
+#@ haet_cleverreach
+msgid "General Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: views/admin/settings-general.php:33
+#@ haet_cleverreach
+msgid "Your CleverReach lists"
+msgstr "Deine CleverReach Gruppen"
+
+#: views/admin/settings-general.php:38
+#@ haet_cleverreach
+msgid "List Name"
+msgstr "Gruppen Name"
+
+#: views/admin/settings-general.php:41
+#@ haet_cleverreach
+msgid "# Subscribers"
+msgstr "Anzahl der Empfänger"
+
+#: views/admin/settings-general.php:61
+#@ haet_cleverreach
+msgid "Reload Lists from CleverReach"
+msgstr "Aktualisiere deine Gruppen von CleverReach "
+
+#: views/admin/settings-integrations.php:3
+#@ haet_cleverreach
+msgid "Integration Settings"
+msgstr "Integrationseinstellungen"
+
+#: views/admin/settings.php:3
+#@ haet_cleverreach
+msgid "CleverReach dashboard settings"
+msgstr "CleverReach Dashboard Einstellungen"
+
+#: views/admin/settings.php:7
+#@ haet_cleverreach
+msgid "API key"
+msgstr "API Key"
+
+#: views/admin/settings.php:10
+#@ haet_cleverreach
+msgid "Save"
+msgstr "Speichern"
+
+#: views/admin/settings.php:12
+#@ haet_cleverreach
+msgid "You can find the API key in your cleverreach account settings"
+msgstr "Du findest deinen API Key in dienen CleverReach Account Einstellungen"
+
+#: views/admin/sidebar-form-usage.php:2
+#@ haet_cleverreach
+msgid "How to use this form"
+msgstr "Verwendung des Formulars"
+
+#: views/admin/sidebar-form-usage.php:3
+#: views/admin/sidebar-styling.php:3
+#@ haet_cleverreach
+msgid "There are different ways to use this form:"
+msgstr "Es gibt verschiedene Möglichkeiten dieses Formular anzuzeigen:"
+
+#: views/admin/sidebar-form-usage.php:6
+#: views/admin/sidebar-styling.php:6
+#@ haet_cleverreach
+msgid "Add the CleverReach widget to your sidebar"
+msgstr "Füge das CleverReach Widget in deine Sidebar ein"
+
+#: views/admin/sidebar-form-usage.php:9
+#: views/admin/sidebar-styling.php:9
+#@ haet_cleverreach
+msgid "Use the <code>[cleverreach_signup]</code> shortcode anywhere in your pages or posts"
+msgstr "Verwende den <code>[cleverreach_signup]</code> Shortcode in deinen Seiten oder Beiträgen"
+
+#: views/admin/sidebar-form-usage.php:12
+#: views/admin/sidebar-styling.php:12
+#@ haet_cleverreach
+msgid "Drop this line of PHP code in your theme where you want to show the form."
+msgstr "Füge diese Zeile PHP Code in deinem Theme an der Stelle ein wo du das Formular anzeigen möchtest."
+
+#: views/admin/sidebar-haet.php:2
+#@ haet_cleverreach
+msgid "Want a custom Newsletter template?"
+msgstr "Individuelle Newsletter Designs"
+
+#: views/admin/sidebar-haet.php:3
+#@ haet_cleverreach
+msgid "If you need help designig and developing your individual newsletter template, just contact us. We are an experienced creating WordPress and CleverReach themes."
+msgstr "Wenn du Hilfe brauchst dein eigenes responsive Newsletter Design zu erstellen melde dich doch einfach bei uns. Wir haben jahrelange Erfahrung mit WordPress und CleverReach Templates ( und wir sprechen deutsch/österreichisch )."
+
+#: views/admin/sidebar-haet.php:6
+#@ haet_cleverreach
+msgid "Contact Us"
+msgstr "Jetzt anfragen"
+
+#: views/admin/sidebar-ninja.php:2
+#@ haet_cleverreach
+msgid "Need more features?"
+msgstr "Brauchst du mehr Features"
+
+#: views/admin/sidebar-ninja.php:3
+#@ haet_cleverreach
+msgid "NinjaForms is a professional WordPress form builder with seamless CleverReach integration."
+msgstr "NinjaForms ist ein professionelles WordPress Formular System mit nahtloser CleverReach Anbindung."
+
+#: views/admin/sidebar-ninja.php:6
+#@ haet_cleverreach
+msgid "Create multiple Sign-Up forms for different lists"
+msgstr "Erstelle mehrere Anmeldeformulare für verschiedene CleverReach Gruppen"
+
+#: views/admin/sidebar-ninja.php:9
+#@ haet_cleverreach
+msgid "Easily build complex forms for contact, booking, request... with CleverReach connection"
+msgstr "Erstelle umfangreiche Formulare für Anfrage, Buchung, Reservierung, Anmeldung... und binde alle Formulare an CleverReach an"
+
+#: views/admin/sidebar-ninja.php:12
+#@ haet_cleverreach
+msgid "Drag & Drop form builder"
+msgstr "Drag & Drop Formular Builder"
+
+#: views/admin/sidebar-ninja.php:15
+#@ haet_cleverreach
+msgid "More than 1 million downloads"
+msgstr "Mehr als eine Million Downloads"
+
+#: views/admin/sidebar-ninja.php:18
+#@ haet_cleverreach
+msgid "Many many integrations"
+msgstr "Sehr viele Anbindungen zu Fremdsystemen"
+
+#: views/admin/sidebar-ninja.php:23
+#@ haet_cleverreach
+msgid "Ninja Forms CleverReach extension"
+msgstr "Ninja Forms CleverReach Erweiterung"
+
+#: views/admin/sidebar-ninja.php:26
+#@ haet_cleverreach
+msgid "Get Ninja Forms"
+msgstr "Ninja Forms Download"
+
+#: views/admin/sidebar-signup.php:3
+#@ haet_cleverreach
+msgid "Already have a CleverReach account?"
+msgstr "Hast du bereits einen CleverReach Account?"
+
+#: views/admin/sidebar-signup.php:7
+#@ haet_cleverreach
+msgid "Signup Now"
+msgstr "Jetzt anmelden"
+
+#: views/admin/sidebar-styling.php:2
+#@ haet_cleverreach
+msgid "How to use this form?"
+msgstr "Dieses Fomular anzeigen"
+
+#: views/admin/sidebar-signup.php:4
+#@ haet_cleverreach
+msgid "CleverReach is absolutely free for up to 250 newsletter subscribers."
+msgstr "CleverReach ist kostenlos für bis zu 250 Empfänger."
+
+#: includes/class-admin.php:390
+#@ haet_cleverreach
+msgid "Please make sure this option is allowed in your country."
+msgstr "Stellen Sie sicher, dass das Vorselektieren der Checkbox in Ihrem Land zulässig ist. In Deutschland kann dies von den Gerichten so gesehen werden, dass die Zustimmung des Kunden nicht nachweisbar ist. <a href=\\\"http://www.it-recht-kanzlei.de/2/Die_Loesung_mit_Haken_fuer_AGB_Datenschutzerklaerung_Widerrufsbelehrung_Co_ein_Muss/bestellvorgang-bestellprozess.html\\\" target=\\\"_blank\\\">mehr...</a>"
+
+#: views/admin/sidebar-woocommerce.php:2
+#@ haet_cleverreach
+msgid "Add to WooCommerce"
+msgstr "CleverReach im WooCommerce Shop integrieren"
+
+#: views/admin/sidebar-woocommerce.php:3
+#@ haet_cleverreach
+msgid "CleverReach can seamlessly be integrated in your WooCommerce checkout process."
+msgstr "Du kannst deine Newsletter Anmeldung direkt in den Bezahlvorgang deines Stores integrieren"
+
+#: views/admin/sidebar-woocommerce.php:6
+#@ haet_cleverreach
+msgid "Add checkbox to checkout"
+msgstr "Anmelde-Checkbox beim Bestellvorgang"
+
+#: views/admin/sidebar-woocommerce.php:9
+#@ haet_cleverreach
+msgid "Select CleverReach group"
+msgstr "CleverReach Gruppe kann im Backend wählbar"
+
+#: views/admin/sidebar-woocommerce.php:12
+#@ haet_cleverreach
+msgid "Submit product categories to CleverReach"
+msgstr "Produktkategorien können an CleverReach übertragen werden"
+
+#: views/admin/sidebar-woocommerce.php:15
+#@ haet_cleverreach
+msgid "Add number of sales per user to CleverReach profile"
+msgstr "Speichert Anzahl der Käufe im CleverReach Profil"
+
+#: views/admin/sidebar-woocommerce.php:18
+#@ haet_cleverreach
+msgid "Keep track of latest purchase date in CleverReach"
+msgstr "Speichert das letzte Bestelldatum in CleverReach"
+
+#: views/admin/sidebar-woocommerce.php:23
+#@ haet_cleverreach
+msgid "CleverReach WooCommerce Plugin"
+msgstr "CleverReach WooCommerce Plugin"
+

@@ -1,0 +1,119 @@
+.haet-cleverreach-settings{
+    float: left;
+    width: 70%;
+    max-width: 700px;
+    padding-right: 3%;
+    border-right:1px solid #ffffff;
+}
+
+.haet-cleverreach-sidebar{
+    float: left;
+    width: 27%;
+    min-width: 300px;
+}
+
+.haet-cleverreach-info-widget{
+    padding:20px;
+    margin: 30px 0;
+    background: #fff;
+}
+
+.haet-cleverreach-info-widget ul{
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.haet-cleverreach-info-widget .button-wrapper{
+    text-align: right;
+}
+
+.haet-cleverreach-settings h2 img{
+    margin-right: 30px;
+}
+
+.haet-cleverreach-settings .success,
+.haet-cleverreach-settings .error,
+.haet-cleverreach-settings .message{
+    margin:30px 0;
+    border:1px solid #fff;
+    padding:10px;
+}
+
+.haet-cleverreach-settings .success::before{
+    color: #508d00;
+}
+
+.haet-cleverreach-settings .error::before{
+    color: #b22424;
+}
+
+.haet-cleverreach-settings .message::before{
+    color: #d65915;
+}
+
+.haet_cleverreach_lists .name{
+    text-align: left;
+}
+
+.haet_cleverreach_lists .count{
+    text-align: right;
+}
+
+.haet-cleverreach-settings .form-table {
+    margin-bottom: 70px;
+}
+
+
+/* FORM BUILDER */
+.haet-cleverreach-settings .sortable-wrapper{
+    width: 300px;
+    margin-right: 20px;
+    float: left;
+    height:400px;
+    overflow-y: scroll;
+    background: #dddddd;
+    padding:5px;
+}
+
+.haet-cleverreach-settings .sortable-wrapper h4{
+    margin: 5px;
+}
+
+.haet-cleverreach-settings .connected-sortable{
+    min-height:350px;
+}
+
+.haet-cleverreach-settings li.attribute{
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    background: #dddddd;
+    padding: 5px 10px;
+    display: block;
+    margin: 2px;
+    cursor:move;
+}
+
+.haet-cleverreach-settings .attribute-name{
+    text-transform: uppercase;
+}
+
+.haet-cleverreach-settings li.attribute label{
+    text-transform: uppercase;
+    color:#999;
+    font-size: 11px;
+    width: 85px; 
+    display: block;
+    float: left;
+}
+
+.haet-cleverreach-settings li.attribute input,
+.haet-cleverreach-settings li.attribute textarea{
+    width: 170px; 
+    display: block;
+    float: left;
+}
+
+.haet-cleverreach-settings .clearfix { zoom: 1; }
+.haet-cleverreach-settings .clearfix:before, 
+.haet-cleverreach-settings .clearfix:after { content: ""; display: table; }
+.haet-cleverreach-settings .clearfix:after { clear: both; }
