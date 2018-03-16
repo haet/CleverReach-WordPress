@@ -28,17 +28,17 @@ function haet_cleverreach_save_settings($new_settings){
 function haet_cleverreach_get_default_settings(){
     return array(
         'show_in_comments'          =>  1,
-        'show_in_comments_caption'  =>  __('Sign up for our newsletter','haet_cleverreach'),
+        'show_in_comments_caption'  =>  __('Sign up for our newsletter','cleverreach'),
         'show_in_comments_defaultchecked'   =>  0,
         'show_at_registration'          =>  0,
-        'show_at_registration_caption'  =>  __('Sign up for our newsletter','haet_cleverreach'),
+        'show_at_registration_caption'  =>  __('Sign up for our newsletter','cleverreach'),
         'show_at_registration_defaultchecked'   =>  0,
         'label_position'    => 'left',
-        'message_error'     =>  __('Oops. Something went wrong. Please try again later.','haet_cleverreach'),
-        'message_success'   =>  __('Thank you for your subscription.','haet_cleverreach'),
-        'message_entry_exists' =>   __('You\'re already subscribed.','haet_cleverreach'),
-        'message_invalid_email' =>   __('Please provide a valid email address.','haet_cleverreach'),
-        'message_required_field' =>  __('This is a mandatory field.','haet_cleverreach'),
+        'message_error'     =>  __('Oops. Something went wrong. Please try again later.','cleverreach'),
+        'message_success'   =>  __('Thank you for your subscription.','cleverreach'),
+        'message_entry_exists' =>   __('You\'re already subscribed.','cleverreach'),
+        'message_invalid_email' =>   __('Please provide a valid email address.','cleverreach'),
+        'message_required_field' =>  __('This is a mandatory field.','cleverreach'),
         'signup_form_id'    =>  '',
         'signup_list_id'    =>  ''
     );
@@ -48,3 +48,5 @@ function print_cleverreach_form($is_widget = false){
     $haet_cleverreach_form = new haet_cleverreach_form();
     $haet_cleverreach_form->show_form($is_widget);
 }
+
+

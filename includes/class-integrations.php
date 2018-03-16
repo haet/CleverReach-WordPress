@@ -39,16 +39,35 @@ class haet_cleverreach_integrations {
         $fields = array();
         $fields['cleverreach_email'] = new stdClass();
         $fields['cleverreach_email']->value = $comment->comment_author_email;
-        $fields['firstname'] = new stdClass();
-        $fields['firstname']->value = $comment->comment_author;
 
+        // SOAP 
+        if( isset($settings['api_key']) && $settings['api_key'] != '' ){
+            $api = new haet_cleverreach_api( $settings['api_key'] );
+            $fields['firstname'] = new stdClass();
+            $fields['firstname']->value = $comment->comment_author;
+            $list_form = $settings['show_in_comments_form'];
+        }
+        if( isset($settings['token']) && $settings['token'] != '' ){
+            if( defined( 'ICL_LANGUAGE_CODE' ) ){ //WPML is active
+                $attribute = $settings['show_in_comments_name_attribute_'.ICL_LANGUAGE_CODE];
+                $list_form = $settings['show_in_comments_form_'.ICL_LANGUAGE_CODE];
+            }else{
+                $attribute = $settings['show_in_comments_name_attribute'];
+                $list_form = $settings['show_in_comments_form'];
+            }
 
-        $api = new haet_cleverreach_api( $settings['api_key'] );
-        $list_form = $settings['show_in_comments_form'];
-        $list_form_array = explode('-', $list_form);
-        $form_id = $list_form_array[1];
-        $list_id = $list_form_array[0];
-        $source = get_bloginfo('name').' (Comments)';
-        $api->subscribe_user($settings, $fields, $form_id, $list_id, $source);
+            $fields[$attribute] = new stdClass();
+            $fields[$attribute]->value = $comment->comment_author;
+            $api = new haet_cleverreach_api_rest( $settings['token'] );
+        }
+
+        if( isset( $api ) ){
+            
+            $list_form_array = explode('-', $list_form);
+            $form_id = $list_form_array[1];
+            $list_id = $list_form_array[0];
+            $source = get_bloginfo('name').' (Comments)';
+            $api->subscribe_user($settings, $fields, $form_id, $list_id, $source);
+        }
     }
 }

@@ -21,22 +21,22 @@ class haet_cleverreach_api {
 			$result = $api->groupGetList($this->api_key);
 			if($result->status != "SUCCESS"){
 				$test_result['success']=false;
-				$test_result['message']=__( 'Your API key is invalid.', 'haet_cleverreach' );
+				$test_result['message']=__( 'Your API key is invalid.', 'cleverreach' );
 			}else{
 				$test_group_name = 'WordPress-Cleverreach-Write-Access-Test';
 				$result = $api->groupAdd($this->api_key, $test_group_name);
 				if($result->status=='ERROR'){
 					$test_result['success']=false;
-					$test_result['message']=__( 'Your API has read-only permissions, please change to read-write-access.', 'haet_cleverreach' );
+					$test_result['message']=__( 'Your API has read-only permissions, please change to read-write-access.', 'cleverreach' );
 				}else{
 					$test_result['success']=true;
-					$test_result['message']=__( 'Successfully connected to Cleverreach with your API key.', 'haet_cleverreach' );
+					$test_result['message']=__( 'Successfully connected to Cleverreach with your API key.', 'cleverreach' );
 					$api->groupDelete($this->api_key, $result->data->id);
 				}
 			}
 		} catch(Exception $e){
 			$test_result['success']=false;
-			$test_result['message']=__( 'Your API key is invalid.', 'haet_cleverreach' );
+			$test_result['message']=__( 'Your API key is invalid.', 'cleverreach' );
 		}
 		return $test_result;
 	}
@@ -58,7 +58,7 @@ class haet_cleverreach_api {
 			if($result->status=="SUCCESS"){
 				if( !is_array($result->data) ){
 					$return['success']=false;
-					$return['message']=__( 'You don\'t have any Cleverreach forms.', 'haet_cleverreach' );
+					$return['message']=__( 'You don\'t have any Cleverreach forms.', 'cleverreach' );
 				}else{
 					$return['success']=true;
 					$return['lists']=array();
@@ -74,36 +74,12 @@ class haet_cleverreach_api {
 			}
 		} catch(Exception $e){
 			$return['success']=false;
-			$return['message']=__( 'Could not connect to the Cleverreach API.', 'haet_cleverreach' );
+			$return['message']=__( 'Could not connect to the Cleverreach API.', 'cleverreach' );
 		}
 		return $return;
 	}
 
 
-
-
-	/**
-	 * Retreive form code from cleverreach API
-	 *
-	 * @return array
-	 */
-	public function get_form_code($form_id){
-		$api = new SoapClient(HAET_CLEVERREACH_API_URL);
-		try{
-			$result = $api->formsGetCode($this->api_key, $form_id);
-			if($result->status=="SUCCESS"){
-				$return['success']=true;
-				$return['code'] = $result->data;
-			}else{
-				$return['success']=false;
-				$return['message']=$result->message;
-			}
-		} catch(Exception $e){
-			$return['success']=false;
-			$return['message']=__( 'Could not connect to the Cleverreach API.', 'haet_cleverreach' );
-		}
-		return $return;
-	}
 
 
 	/**
@@ -124,7 +100,7 @@ class haet_cleverreach_api {
 			}
 		} catch(Exception $e){
 			$return['success']=false;
-			$return['message']=__( 'Could not connect to the Cleverreach API.', 'haet_cleverreach' );
+			$return['message']=__( 'Could not connect to the Cleverreach API.', 'cleverreach' );
 		}
 		return $return;
 	}
@@ -145,11 +121,11 @@ class haet_cleverreach_api {
 		}
 
 		$user_data = array();
-		foreach ($submission as $key => $value) {
+		foreach ($submission as $key => $data) {
 			if( !in_array($key, array('cleverreach_email') ) ){
 				$user_data[] = array(
 					'key'	=>	$key,
-					'value'	=>	$value->value
+					'value'	=>	$data->value
 				);
 			}
 		}
@@ -193,7 +169,7 @@ class haet_cleverreach_api {
 			}
 		} catch(Exception $e){
 			$return['success'] = false;
-			$return['message'] = __( 'Could not connect to the Cleverreach API.', 'haet_cleverreach' );
+			$return['message'] = __( 'Could not connect to the Cleverreach API.', 'cleverreach' );
 		}
 		return $return;
 	}

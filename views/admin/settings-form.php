@@ -1,47 +1,40 @@
 <div id="haet-cleverreach-settings-form" class="wrap haet-cleverreach-settings">
-	<h2><img src="<?php echo HAET_CLEVERREACH_URL . 'images/logo.png'; ?>" /> <?php _e( 'Form Builder', 'haet_cleverreach' ); ?></h2>
-    
+	<h2><img src="<?php echo HAET_CLEVERREACH_URL . 'images/logo.png'; ?>" /> <?php _e( 'Form Builder', 'cleverreach' ); ?></h2>
+        
     <?php if( isset( $attributes ) || isset($settings['attributes_available'])  || isset($settings['attributes_used']) ): ?>
     	<form action="options.php" method="post">
     		
-            <?php /*
-            <textarea><?php echo $settings['form_code']; ?></textarea>
-            
-    		<?php submit_button(); ?>
-            <pre>
-            <?php print_r($attributes); ?>
-            </pre>*/ ?>
-            <h3><?php _e('Drag & Drop fields to create your form','haet_cleverreach'); ?></h3>
+            <h3><?php _e('Drag & Drop fields to create your form','cleverreach'); ?></h3>
             <div class="clearfix">
                 <div class="sortable-wrapper">
-                    <h4><?php _e('Your Form','haet_cleverreach'); ?></h4>
+                    <h4><?php _e('Your Form','cleverreach'); ?></h4>
                     <ul id="haet_cleverreach_formfields_used" class="connected-sortable">
                         
                     </ul>
                 </div>
                 <div class="sortable-wrapper">
-                    <h4><?php _e('Available Fields','haet_cleverreach'); ?></h4>
+                    <h4><?php _e('Available Fields','cleverreach'); ?></h4>
                     <ul id="haet_cleverreach_formfields_available" class="connected-sortable">
                         <?php if( isset( $attributes ) && is_array( $attributes ) ): // Data refreshed ?>
                             <li id="cleverreach-attribute-description" data-key="cleverreach_description" data-type="description" class="attribute clearfix type-description">
 
                                 <span class="attribute-name">
                                     <span class="dashicons dashicons-editor-alignleft"></span>
-                                    <?php _e( 'Description Text', 'haet_cleverreach' ); ?>
+                                    <?php _e( 'Description Text', 'cleverreach' ); ?>
                                 </span>
                                 <div class="field-description">
-                                    <label><?php _e( 'Text', 'haet_cleverreach' ); ?></label>
-                                    <textarea><?php _e( 'Signup for our Newsletter!', 'haet_cleverreach' ); ?></textarea>
+                                    <label><?php _e( 'Text', 'cleverreach' ); ?></label>
+                                    <textarea><?php _e( 'Signup for our Newsletter!', 'cleverreach' ); ?></textarea>
                                 </div>
                             </li>
                             <li id="cleverreach-attribute-email" data-key="cleverreach_email" data-type="email" class="attribute clearfix type-email">
                                 <span class="attribute-name">
                                     <span class="dashicons dashicons-email"></span>
-                                    <?php _e( 'Email Address', 'haet_cleverreach' ); ?>
+                                    <?php _e( 'Email Address', 'cleverreach' ); ?>
                                 </span>
                                 <div class="field-label">
-                                    <label><?php _e( 'Label', 'haet_cleverreach' ); ?></label>
-                                    <input type="text" value="<?php _e( 'Email', 'haet_cleverreach' ); ?>">
+                                    <label><?php _e( 'Label', 'cleverreach' ); ?></label>
+                                    <input type="text" value="<?php _e( 'Email', 'cleverreach' ); ?>">
                                 </div>
                             </li>
 
@@ -51,23 +44,24 @@
                                     $icon = '<span class="dashicons dashicons-universal-access"></span>';
                                 if( $attribute->type == 'text' )
                                     $icon = '<span class="dashicons dashicons-feedback"></span>';
+
                                 ?>
-                                <li id="cleverreach-attribute-<?php echo $attribute->key; ?>" data-key="<?php echo $attribute->key; ?>" data-type="<?php echo $attribute->type; ?>" class="attribute clearfix type-<?php echo $attribute->type; ?>">
+                                <li id="cleverreach-attribute-<?php echo $attribute->name; ?>" data-key="<?php echo $attribute->name; ?>" data-type="<?php echo $attribute->type; ?>" class="attribute clearfix type-<?php echo $attribute->type; ?>">
                                     <span class="attribute-name">
-                                        <?php echo $icon.' '.$attribute->key; ?>
+                                        <?php echo $icon.' ' . (strpos( $attribute->name, 'GLOBAL_' ) !== FALSE ? '<span class="dashicons dashicons-admin-site" title="' . __('Global Attribute','cleverreach') . '"></span>' : '' ) . ' ' . $attribute->description; ?>
                                     </span>
                                     <div class="field-label">
-                                        <label><?php _e( 'Label', 'haet_cleverreach' ); ?></label>
-                                        <input type="text" value="<?php echo ucfirst( str_replace('_', ' ', $attribute->key) ); ?>">
+                                        <label><?php _e( 'Label', 'cleverreach' ); ?></label>
+                                        <input type="text" value="<?php echo $attribute->description; ?>">
                                     </div>
                                     <?php if( $attribute->type == 'gender' ): ?>
                                         <div class="field-options">
-                                            <label><?php _e( 'Available Options', 'haet_cleverreach' ); ?></label>
+                                            <label><?php _e( 'Available Options', 'cleverreach' ); ?></label>
                                             <textarea><?php 
-                                                echo    __( 'Mrs.', 'haet_cleverreach' )."\n".
-                                                        __( 'Mr.', 'haet_cleverreach' )."\n".
-                                                        __( 'Family', 'haet_cleverreach' )."\n".
-                                                        __( 'Company', 'haet_cleverreach' );
+                                                echo    __( 'Mrs.', 'cleverreach' )."\n".
+                                                        __( 'Mr.', 'cleverreach' )."\n".
+                                                        __( 'Family', 'cleverreach' )."\n".
+                                                        __( 'Company', 'cleverreach' );
                                             ?></textarea>
                                         </div>
                                     <?php endif; ?>
@@ -77,11 +71,11 @@
                             <li id="cleverreach-attribute-submit_button" data-key="cleverreach_submit_button" data-type="submit"  class="attribute clearfix type-submit">
                                 <span class="attribute-name">
                                     <span class="dashicons dashicons-yes"></span>
-                                    <?php _e( 'Submit Button', 'haet_cleverreach' ); ?>
+                                    <?php _e( 'Submit Button', 'cleverreach' ); ?>
                                 </span>
                                 <div class="field-label">
-                                    <label><?php _e( 'Label', 'haet_cleverreach' ); ?></label>
-                                    <input type="text" value="<?php _e( 'Subscribe', 'haet_cleverreach' ); ?>">
+                                    <label><?php _e( 'Label', 'cleverreach' ); ?></label>
+                                    <input type="text" value="<?php _e( 'Subscribe', 'cleverreach' ); ?>">
                                 </div>
                             </li>
                         <?php endif; ?>
@@ -94,19 +88,19 @@
         </form>
         <br><hr><br>
         <p>
-            <?php _e( 'Delete this form and reload attributes from CleverReach?', 'haet_cleverreach' ); ?>
+            <?php _e( 'Delete this form and reload attributes from CleverReach?', 'cleverreach' ); ?>
         </p>
     <?php else: ?>
         
     <?php endif; ?>
     <p>
-        <?php _e( 'Please select a form below to load the attributes from CleverReach.', 'haet_cleverreach' ); ?>
+        <?php _e( 'Please select a form below to load the attributes from CleverReach.', 'cleverreach' ); ?>
     </p>
 	<form method="post">
         <table class="form-table">
             <tbody>
                 <tr>
-                    <th scope="row"><?php _e( 'CleverReach form', 'haet_cleverreach' ); ?></th>
+                    <th scope="row"><?php _e( 'CleverReach form', 'cleverreach' ); ?></th>
                     <td>   
                         <?php if( isset( $settings['lists'] ) && is_array( $settings['lists'] ) ): ?>
                             <select name="haet_cleverreach_get_fields">
@@ -118,7 +112,7 @@
                 <tr>
                     <th scope="row"></th>
                     <td>   
-                        <input type="submit" value="<?php _e( 'Load Form Attributes', 'haet_cleverreach' ); ?>" class="button" />  
+                        <input type="submit" value="<?php _e( 'Load Form Attributes', 'cleverreach' ); ?>" class="button" />  
                     </td>
                 </tr>
             </tbody>

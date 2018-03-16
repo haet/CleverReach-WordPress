@@ -18,7 +18,8 @@ haet_cleverreach.serialize_form_fields = function(){
             'field' : $attribute.data('key'),
             'label' : label,
             'type'  : type,
-            'options': ($attribute.hasClass('type-gender')?$attribute.find('.field-options textarea').val():'')
+            'options': ($attribute.hasClass('type-gender')?$attribute.find('.field-options textarea').val():''),
+            'attribute_name': $attribute.find('.attribute-name').html()
         });
     }
     var available_ids = $( '#haet_cleverreach_formfields_available' ).sortable( "toArray");
@@ -35,7 +36,8 @@ haet_cleverreach.serialize_form_fields = function(){
             'field' : $attribute.data('key'),
             'label' : label,
             'type'  : type,
-            'options': ($attribute.hasClass('type-gender')?$attribute.find('.field-options textarea').val():'')
+            'options': ($attribute.hasClass('type-gender')?$attribute.find('.field-options textarea').val():''),
+            'attribute_name': $attribute.find('.attribute-name').html()
         });
     }
     $('input[name="haet_cleverreach_settings[attributes_used]"]').val( JSON.stringify( used ) );
@@ -67,36 +69,24 @@ haet_cleverreach.unserialize_form_fields = function(){
 // ********************************************
 // get html code for form builder element
 haet_cleverreach.get_attribute_sortable_html = function(attribute){
-    var icon = '<span class="dashicons dashicons-marker"></span>';
-    if( attribute.type == 'gender' )
-        icon = '<span class="dashicons dashicons-universal-access"></span>';
-    if( attribute.type == 'submit' )
-        icon = '<span class="dashicons dashicons-yes"></span>';
-    if( attribute.type == 'text' )
-        icon = '<span class="dashicons dashicons-feedback"></span>';
-    if( attribute.type == 'email' )
-        icon = '<span class="dashicons dashicons-email"></span>';
-    if( attribute.type == 'description' )
-        icon = '<span class="dashicons dashicons-editor-alignleft"></span>';
-
     var $ = jQuery;
     var html = 
         '<li id="cleverreach-attribute-'+attribute.field+'" data-key="'+attribute.field+'" data-type="'+attribute.type+'" class="attribute clearfix type-'+attribute.type+'">'+
-            '<span class="attribute-name">'+icon+' '+
-                attribute.field.replace('cleverreach_','').replace('_',' ')+
+            '<span class="attribute-name">'+attribute.attribute_name+
             '</span>';
     if( attribute.type == 'text' || attribute.type == 'email' || attribute.type == 'submit' || attribute.type == 'gender' ){
         html += 
             '<div class="field-label">'+
-                '<label>'+ajax_object.translations.label+'</label>'+
+                '<label>'+haet_cr_ajax.translations.label+'</label>'+
                 '<input type="text" value="'+attribute.label+'">'+
             '</div>';
     }
     
+    
     if( attribute.type == 'description' ){
         html += 
             '<div class="field-description">'+
-                '<label>'+ajax_object.translations.text+'</label>'+
+                '<label>'+haet_cr_ajax.translations.text+'</label>'+
                 '<textarea>'+attribute.label+'</textarea>'+
             '</div>';
     }
@@ -104,7 +94,7 @@ haet_cleverreach.get_attribute_sortable_html = function(attribute){
     if( attribute.type == 'gender' ){
         html += 
                 '<div class="field-options">'+
-                    '<label>'+ajax_object.translations.available_options+'</label>'+
+                    '<label>'+haet_cr_ajax.translations.available_options+'</label>'+
                     '<textarea>'+attribute.options+'</textarea>'+
                 '</div>';
     }
@@ -145,11 +135,18 @@ jQuery(document).ready(function($) {
 
         
         $('input[name="haet_cleverreach_settings[show_in_comments_caption]"]').prop('disabled',disabled);
-        $('select[name="haet_cleverreach_settings[show_in_comments_form]"]').prop('disabled',disabled);
+        $('select[name^="haet_cleverreach_settings[show_in_comments_form"]').prop('disabled',disabled);
+        $('select[name^="haet_cleverreach_settings[show_in_comments_name_attribute"]').prop('disabled',disabled);
         $('input[name="haet_cleverreach_settings[show_in_comments_defaultchecked]"]').prop('disabled',disabled);
 
     });
     $('input[name="haet_cleverreach_settings[show_in_comments]"]').change();
+
+    $('select[name^="haet_cleverreach_settings[show_in_comments_form"]').change( function() {
+        $('select[name^="haet_cleverreach_settings[show_in_comments_name_attribute"]').prop('disabled',true);
+        $('.list-change-notice').slideDown(400);
+    });
+
 }); 
 
 

@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
             'submission': submission
         };
 
-        $.post(ajax_object.ajax_url, data, function (response) {
+        $.post(haet_cr_ajax.ajax_url, data, function (response) {
             $form.replaceWith(response);
         });
 

@@ -4,7 +4,7 @@ class haet_cleverreach_widget extends WP_Widget {
 
     function __construct() {
         // Instantiate the parent object
-        parent::__construct( false, __('CleverReach Sign-Up Form', 'haet_cleverreach') );
+        parent::__construct( false, __('CleverReach Sign-Up Form', 'cleverreach') );
     }
 
     function widget( $args, $instance ) {

@@ -1,13 +1,13 @@
 === CleverReach Newsletter ===
 Contributors: haet
-Tags: email, newsletter, cleverreach, campaign, widget, marketing
+Tags: email, newsletter, cleverreach, campaign, widget, marketing, woocommerce
 Requires at least: 3.9
-Tested up to: 4.7
-Stable tag: 1.7.1
+Tested up to: 4.9
+Stable tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easily integrate a CleverReach Sign-Up form in your website. Supports widget, shortcode, comment integration and template function.
+Easily integrate a CleverReach Sign-Up form in your website. Supports widget, shortcode, comment integration and template function and even works with WooCommerce
 
 == Description ==
 Connect your WordPress website to your [CleverReach Newsletter](http://www.cleverreach.com/?rk=74089ojcjrsrb) account.
@@ -34,7 +34,7 @@ Display a checkbox in your comment form to allow users to subscribe to your news
 
 
 = Integrate CleverReach in your Contact form =
-Have a look at the [NinjaForms CleverReach plugin](http://etzelstorfer.com/ninja-forms-cleverreach/) to send any contact form submissions directly to your CleverReach lists.
+Have a look at the [NinjaForms CleverReach plugin](http://etzelstorfer.com/en/downloads/ninja-forms-cleverreach/) to send any contact form submissions directly to your CleverReach lists.
 
 = Add a newsletter signup checkbox to your WooCommerce checkout process =
 Get more subscribers by adding adding subscription to your store checkout. [more...](http://etzelstorfer.com/en/downloads/cleverreach-woocommerce-integration/)
@@ -49,9 +49,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 == Frequently Asked Questions ==
 
-= QUESTION? =
+= System Requirements =
 
-Answer
+You need PHP 5.6 or higher as well as CURL to use this plugin.
+
 
 == Screenshots ==
 1. Form Builder
@@ -59,6 +60,23 @@ Answer
 
 == Changelog ==
 
+
+= 2.1 =
+Improved authetication workflow.
+Fixed the empty error message appearing on some installations
+
+
+= 2.0.4 =
+Added additional check for global and local attributes
+
+= 2.0.3 =
+Changed API version
+
+= 2.0.1 =
+Load CleverReach API PHP class only once (in case there are several CleverReach plugins installed)
+
+= 2.0 = 
+Changed to CleverReach REST API
 
 = 1.7 =
 PHP 7 support

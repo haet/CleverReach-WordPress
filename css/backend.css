@@ -97,6 +97,10 @@
     text-transform: uppercase;
 }
 
+.haet-cleverreach-settings .attribute-name .dashicons-admin-site{
+    font-size: 12px;
+}
+
 .haet-cleverreach-settings li.attribute label{
     text-transform: uppercase;
     color:#999;
@@ -112,6 +116,12 @@
     display: block;
     float: left;
 }
+
+
+.haet-cleverreach-settings .list-change-notice{
+    display: none;
+}
+
 
 .haet-cleverreach-settings .clearfix { zoom: 1; }
 .haet-cleverreach-settings .clearfix:before, 

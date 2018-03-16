@@ -1,6 +1,6 @@
 <div id="haet-cleverreach-settings-integrations" class="wrap haet-cleverreach-settings">
 
-	<h2><img src="<?php echo HAET_CLEVERREACH_URL . 'images/logo.png'; ?>" /> <?php _e( 'Integration Settings', 'haet_cleverreach' ); ?></h2>
+	<h2><img src="<?php echo HAET_CLEVERREACH_URL . 'images/logo.png'; ?>" /> <?php _e( 'Integration Settings', 'cleverreach' ); ?></h2>
 
 	<form action="options.php" method="post">
 		<?php settings_fields( 'haet_cleverreach_option_group' ); ?>

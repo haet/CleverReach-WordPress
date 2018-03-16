@@ -27,7 +27,7 @@ class haet_cleverreach_form {
      */
     public function form_scripts_and_styles($page){
         wp_enqueue_script('haet_cleverreach_script',  HAET_CLEVERREACH_URL.'/js/form.js', array( 'jquery'), '', true );
-        wp_localize_script( 'haet_cleverreach_script', 'ajax_object',
+        wp_localize_script( 'haet_cleverreach_script', 'haet_cr_ajax',
             array( 
                 'ajax_url'  => admin_url( 'admin-ajax.php' )
             ) 
@@ -85,7 +85,22 @@ class haet_cleverreach_form {
                 }
 
                 if( $validation->valid ){
-                    if( isset($settings['api_key']) && $settings['api_key'] != '' ){
+                    // REST
+                    if( isset($settings['token']) && $settings['token'] != '' ){
+                        $form_id = $settings['signup_form_id'];
+                        $list_id = $settings['signup_list_id'];
+                        $api = new haet_cleverreach_api_rest( $settings['token'] );
+                        if( $validation->is_widget )
+                            $source = get_bloginfo('name').' (Widget)';
+                        else
+                            $source = get_bloginfo('name').' (Newsletter form)';
+                        $subscription_result = $api->subscribe_user($settings, $validation->fields, $form_id, $list_id, $source);
+                        //echo '<pre>'.print_r($subscription_result,true).'</pre>';
+                        if( !$subscription_result['success'] ){
+                            $validation->valid = false;
+                            $validation->message = $subscription_result['message'];
+                        }
+                    }elseif( isset($settings['api_key']) && $settings['api_key'] != '' ){ //SOAP
                         $form_id = $settings['signup_form_id'];
                         $list_id = $settings['signup_list_id'];
                         $api = new haet_cleverreach_api( $settings['api_key'] );
@@ -99,11 +114,7 @@ class haet_cleverreach_form {
                             $validation->valid = false;
                             $validation->message = $subscription_result['message'];
                         }
-                    }else{
-                        $validation->valid = false;
-                        $validation->message = $settings['message_error'];
                     }
-
                 }
                 if(!session_id()) {
                     session_start();
